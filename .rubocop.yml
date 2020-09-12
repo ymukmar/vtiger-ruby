@@ -62,7 +62,7 @@ Layout/FirstArgumentIndentation:
 # Method definitions after `private` or `protected` isolated calls need one
 # extra level of indentation.
 Layout/IndentationConsistency:
-  Enabled: true
+  Enabled: false
   EnforcedStyle: indented_internal_methods
 
 # Two spaces, no tabs (for indentation).
