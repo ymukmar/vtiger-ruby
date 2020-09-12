@@ -1,0 +1,8 @@
+plugins:
+  rubocop:
+    enabled: true
+    config: '.rubocop.yml'
+
+ratings:
+  paths:
+    - '**.rb'
