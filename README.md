@@ -11,13 +11,13 @@ Official documentation of the Vtiger API can be found here:
 
 * Retrieve your `Accesskey` token information from the `My Preferences` page in the CRM Web UI.
 * `username` information used when signing into your instance of the CRM.
-* `endpoint` url specific to your instance, eg: `https://your_instance.odx.vtiger.com/restapi/v1/vtiger/default`.
+* `endpoint` url specific to your instance, eg: https://your_instance.odx.vtiger.com/restapi/v1/vtiger/default
 
 > Installation information coming soon...
 
 ### Creating a Client
 
-```
+```ruby
 require 'vtiger-ruby'
 ```
 
@@ -40,18 +40,18 @@ client = VtigerRuby::Client.new(
 Vtiger API Authentication happens in two steps:
 
 1. Request the challenge token
-```
+```ruby
 client.get_challenge
 ```
 
 2. Login request
-```
+```ruby
 client.login
 ```
 
 Alternatively, you can authenticate the client using the `connect` method.
 This single method call negates the need to complete `step 1` & `step 2` listed above.
-```
+```ruby
   client.connect
 ```
 
@@ -99,4 +99,4 @@ accounts = client.account.all
 
 ## Code Status
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/25a5fa53236293d044d8/maintainability)](https://codeclimate.com/github/ymukmar/vtiger-ruby/maintainability) | [![Build Status](https://travis-ci.com/ymukmar/vtiger-ruby.svg?branch=main)](https://travis-ci.com/ymukmar/vtiger-ruby)
+[![Maintainability](https://api.codeclimate.com/v1/badges/25a5fa53236293d044d8/maintainability)](https://codeclimate.com/github/ymukmar/vtiger-ruby/maintainability) [![Build Status](https://travis-ci.com/ymukmar/vtiger-ruby.svg?branch=main)](https://travis-ci.com/ymukmar/vtiger-ruby)
