@@ -55,6 +55,11 @@ This single method call negates the need to complete `step 1` & `step 2` listed 
   client.connect
 ```
 
+To end the session on Vtiger and disconnect the client
+```ruby
+client.logout
+```
+
 ## Models
 
 The SDK arranges default [Vtiger CRM Modules](https://www.vtiger.com/docs/rest-api-for-vtiger#/CRM_Modules) into `model` classes.
