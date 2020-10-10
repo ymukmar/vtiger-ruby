@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yedidia Muk'mar"]
   spec.email         = ['']
   spec.summary       = 'Vtiger API Ruby SDK'
-  spec.description   = 'Unofficial Vtiger API Library for Ruby applications'
+  spec.description   = 'Vtiger API Library for Ruby applications'
 
   spec.required_ruby_version = '>= 2.5.1'
 
