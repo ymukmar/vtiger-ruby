@@ -79,4 +79,14 @@ describe VtigerRuby::Client do
             .to(nil)
     end
   end
+
+  describe 'account' do
+    it 'sets the client as a class object and returns the account class' do
+      client.connect
+
+      expect(client.account.class_variable_get(:@@client)).to eq(client)
+      expect(client.account.class_variable_get(:@@client)).to be_a(VtigerRuby::Client)
+      expect(client.account).to eq(VtigerRuby::Account)
+    end
+  end
 end

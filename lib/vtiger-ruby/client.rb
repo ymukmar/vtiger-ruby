@@ -3,9 +3,9 @@ require 'json'
 
 module VtigerRuby
   class Client
-    attr_accessor :endpoint, :username, :accesskey
+    attr_accessor :endpoint, :username, :accesskey, :session_id
 
-    def initialize(endpoint:, username:, accesskey:)
+    def initialize(endpoint: nil, username: nil, accesskey: nil)
       @endpoint = endpoint
       @username = username
       @accesskey = accesskey
@@ -65,6 +65,11 @@ module VtigerRuby
       remove_instance_variable(:@md5_token)
 
       JSON.parse(response.body)
+    end
+
+    def account
+      VtigerRuby::Account.class_config(self)
+      VtigerRuby::Account
     end
 
     private
