@@ -7,13 +7,23 @@ Official documentation of the Vtiger API can be found here:
 1. [Vtiger REST API Docs](https://www.vtiger.com/docs/rest-api-for-vtiger)
 2. [Vtiger Third Party Integrations](https://community.vtiger.com/help/vtigercrm/developers/third-party-app-integration.html)
 
+## Installation
+
+You can install this gem to your gemset.
+```
+gem install 'vtiger-ruby'
+```
+
+Or add it to your gemfile and run bundle install.
+```
+gem 'vtiger-ruby'
+```
+
 ## Getting Started
 
 * Retrieve your `Accesskey` token information from the `My Preferences` page in the CRM Web UI.
 * `username` information used when signing into your instance of the CRM.
 * `endpoint` url specific to your instance, eg: https://your_instance.odx.vtiger.com/restapi/v1/vtiger/default
-
-> Installation information coming soon...
 
 ### Creating a Client
 
@@ -52,7 +62,7 @@ client.login
 Alternatively, you can authenticate the client using the `connect` method.
 This single method call negates the need to complete `step 1` & `step 2` listed above.
 ```ruby
-  client.connect
+client.connect
 ```
 
 To end the session on Vtiger and disconnect the client
